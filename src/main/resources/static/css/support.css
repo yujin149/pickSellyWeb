@@ -1,0 +1,6 @@
+/*공지사항*/
+.inquiryWrap{margin-top:40px;}
+.inquiryWrap .btnWrap{display:flex; justify-content:flex-end; align-items:center; margin-top:40px;}
+.inquiryWrap .btn {width:180px;}
+
+.inquiryWrap .inquiryTable {border-top:2px solid var(--point-color);}

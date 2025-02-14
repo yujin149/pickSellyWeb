@@ -6,10 +6,10 @@
     <header class="header">
         <ul class="topMenu auto">
             <li><span class="userName" sec:authorize="isAuthenticated()" th:text="${#authentication.name} + ' 님'">사용자 님</span></li><!--로그인을 한 경우-->
-            <li><a href="members/login" sec:authorize="isAnonymous()">로그인</a></li> <!--로그인을 하지 않은 경우-->
-            <li><a href="members/logout" sec:authorize="isAuthenticated()">로그아웃</a></li> <!--로그인을 한 경우-->
-            <li><a href="support/qna">고객센터</a></li>
-            <li><a href="support/guide">이용문의</a></li>
+            <li><a href="/members/login" sec:authorize="isAnonymous()">로그인</a></li> <!--로그인을 하지 않은 경우-->
+            <li><a href="/members/logout" sec:authorize="isAuthenticated()">로그아웃</a></li> <!--로그인을 한 경우-->
+            <li><a href="/support/qna">고객센터</a></li>
+            <li><a href="/support/guide">이용문의</a></li>
         </ul>
         <div class="headerInner auto">
             <h1 class="logoArea"><a href="/"><img src="../images/logo.png" alt="PICKSELLY"></a></h1>
@@ -18,10 +18,10 @@
                 <span class="searchIcon"><img src="../images/searchIcon.png" alt="검색"></span>
             </div>
             <ul class="menuIcon">
-                <li><a href="mypage/mypage"><span class="blind">마이페이지</span></a></li>
-                <li><a href="mypage/interest"><span class="blind">관심상품</span></a></li>
-                <li><a href="mypage/cart"><span class="blind">장바구니</span></a></li>
-                <li><a href="mypage/order"><span class="blind">주문내역</span></a></li>
+                <li><a href="/mypage/mypage"><span class="blind">마이페이지</span></a></li>
+                <li><a href="/mypage/interest"><span class="blind">관심상품</span></a></li>
+                <li><a href="/mypage/cart"><span class="blind">장바구니</span></a></li>
+                <li><a href="/mypage/order"><span class="blind">주문내역</span></a></li>
             </ul>
         </div>
 
@@ -29,32 +29,32 @@
             <div class="auto">
                 <ul class="depth01">
                     <li>
-                        <a href="brand/introduce">브랜드 스토리</a>
+                        <a href="/brand/introduce">브랜드 스토리</a>
                         <ul class="depth02">
-                            <li><a href="brand/introduce">브랜드 스토리</a></li>
-                            <li><a href="brand/contact">오시는 길</a></li>
+                            <li><a href="/brand/introduce">브랜드 스토리</a></li>
+                            <li><a href="/brand/contact">오시는 길</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="menu/salad">메뉴</a>
                         <ul class="depth02">
-                            <li><a href="menu/salad">Salad</a></li>
-                            <li><a href="menu/poke">Poke</a></li>
-                            <li><a href="menu/yogurt">Yogurt</a></li>
-                            <li><a href="menu/drink">Drink</a></li>
+                            <li><a href="/menu/salad">Salad</a></li>
+                            <li><a href="/menu/poke">Poke</a></li>
+                            <li><a href="/menu/yogurt">Yogurt</a></li>
+                            <li><a href="/menu/drink">Drink</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="brand/store">매장안내</a>
+                        <a href="/brand/store">매장안내</a>
                         <ul class="depth02">
-                            <li><a href="brand/store">매장찾기</a></li>
+                            <li><a href="/brand/store">매장찾기</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="community/notice">커뮤니티</a>
+                        <a href="/community/notice">커뮤니티</a>
                         <ul class="depth02">
-                            <li><a href="community/notice">공지사항</a></li>
-                            <li><a href="community/event">이벤트</a></li>
+                            <li><a href="/community/notice">공지사항</a></li>
+                            <li><a href="/community/event">이벤트</a></li>
                         </ul>
                     </li>
                     <li>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout1}">
+<body>
+<div layout:fragment="content">
+    <div class="auto contWrap inquiryWrap">
+        <div class="titleWrap">
+            <h3 class="title">문의 작성하기</h3>
+        </div>
+
+
+        <div class="inquiryTable">
+            <form action="/inquiry" method="post">
+                <ul class="inquiryBox writeTable">
+                    <li class="wp50">
+                        <p class="tit">회사명 <span class="star">*</span></p>
+                        <div class="textBox">
+                            <input type="text">
+                            <p class="error">회사명을 입력해주세요.</p>
+                        </div>
+                    </li>
+                    <li class="wp50">
+                        <p class="tit">담당자명 <span class="star">*</span></p>
+                        <div class="textBox">
+                            <input type="text">
+                            <p class="error">담당자명을 입력해주세요.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="tit">이메일 <span class="star">*</span></p>
+                        <div class="textBox">
+                            <div class="email">
+                                <input type="text" name="email01">
+                                <span>@</span>
+                                <input type="text" name="email02">
+                                <select name="emailDomain">
+                                    <option value="직접입력">직접입력</option>
+                                    <option value="hanmail.net">hanmail.net</option>
+                                    <option value="naver.com">naver.com</option>
+                                    <option value="nate.com">nate.com</option>
+                                    <option value="gmail.com">gmail.com</option>
+                                </select>
+                                <!-- 숨겨진 이메일 도메인 필드 추가 -->
+                                <input type="hidden" name="hiddenEmailDomain" id="hiddenEmailDomain">
+                            </div>
+                            <p class="error">연락 받으실 이메일을 입력해주세요.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="tit">연락처 <span class="star">*</span></p>
+                        <div class="textBox">
+                            <div class="phone">
+                                <select id="phone1" name="phone1">
+                                    <option value="010">010</option>
+                                    <option value="011">011</option>
+                                    <option value="016">016</option>
+                                    <option value="017">017</option>
+                                    <option value="018">018</option>
+                                    <option value="019">019</option>
+                                </select>
+                                <span>-</span>
+                                <input type="text" id="phone2" name="phone2" maxlength="4">
+                                <span>-</span>
+                                <input type="text" id="phone3" name="phone3" maxlength="4">
+                            </div>
+                            <p class="error" >연락 받으실 번호를 입력해주세요.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="tit">제목 <span class="star">*</span></p>
+                        <div class="textBox">
+                            <input type="text" placeholder="제목을 입력해주세요.">
+                            <p class="error" >제목은 필수 입력 값입니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="tit">문의 내용 <span class="star">*</span></p>
+                        <div class="textBox">
+                            <textarea  placeholder="문의 내용을 작성해주세요."></textarea>
+                            <p class="error" >내용은 필수 입력 값입니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="tit">첨부파일</p>
+                        <div class="textBox">
+                            <div class="uplodeFile">
+                                <input type="text" placeholder="첨부파일을 선택해주세요." readonly id="fileNmInput">
+                                <label for="frmFile">첨부파일
+                                    <input type="file" name="mulipartFile" id="frmFile">
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="tit">비밀글 설정</p>
+                        <div class="textBox">
+
+                        </div>
+                    </li>
+                    <li>
+                        <p class="tit">약관동의</p>
+
+                    </li>
+                </ul>
+
+
+
+                <div class="btnWrap btnWrap2">
+                    <button type="button" class="btn submitBtn" th:onclick="|location.href='@{/support/inquiry}';|">등록</button>
+                    <button type="button" class="btn lineBtn" th:onclick="|location.href='@{/support/inquiry}';|">목록</button>
+                </div>
+            </form>
+        </div>
+
+
+
+    </div>
+</div>
+</body>
+</html>
