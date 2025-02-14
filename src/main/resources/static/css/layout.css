@@ -1,0 +1,72 @@
+/*select*/
+.selectBox{position:relative; padding-right:20px; height:40px; cursor:pointer;}
+.selectBox .selectVal{ color:var(--black-color); width:100%; cursor:pointer; height:40px; line-height:40px;}
+.selectBox:after{content:''; display:block;  position:absolute; top:20px; right:0; transform:translateY(-50%); width:12px; height:12px; background:url(../images/sortDown.png)no-repeat center; }
+.selectBox:hover:after{transform:rotate(180deg);top:14px;}
+
+.selectList{border:1px solid var(--border-color); border-radius:5px; overflow:hidden; width:calc(100% + 20px); position:absolute; top:40px; left:0;  box-shadow:3px 3px 5px rgba(55,55,55,0.05); display:none;}
+.selectList li{ cursor:pointer; padding:0 10px ; height:40px; line-height:40px; width:100%; font-size:15px; font-weight:500; background:#fff; }
+
+.selectList li:last-child{border-bottom:none; }
+.selectList li:hover{background:#f0f0f0; color:var(--black-color);}
+
+
+/*input[type=text], input[type=password] */
+label{cursor:pointer;}
+input[type="text"], input[type=password]{background:inherit; border:1px solid var(--border-color); border-radius:10px; height:45px; padding:0 10px;}
+/*입력시 색상*/
+input:-webkit-autofill {}
+
+/*input[type=checkbox]*/
+input[type=checkbox]{display:none;}
+input[type=checkbox] + .chkBox{display:inline-block;margin-right:5px; border:1px solid var(--border-color); width:15px; height:15px; border-radius:3px; vertical-align: middle; cursor:pointer; user-select:none/* 드래그 금지*/}
+input[type=checkbox]:checked + .chkBox{background:var(--point-color) url("../images/check.png") no-repeat center; border-color:var(--point-color);}
+
+/*search 검색*/
+.searchBox{position:relative;}
+.searchBox input[type="text"]{width:360px; border:1px solid var(--border-color); border-radius: 45px; height:45px; padding-left:20px; padding-right:60px; font-size:var(--text-size);}
+.searchBox input::placeholder{color:var(--small-color);}
+.searchBox .searchIcon{position:absolute; top:0; right:0; cursor:pointer; height:45px; width:60px; display:flex; justify-content:center; align-items:center;}
+
+
+/*버튼 btnWrap*/
+.btnWrap{width:100%; }
+.btnWrap .btn{width:100%; height:55px; border-radius:10px; font-weight:700;}
+.btnWrap .submitBtn{color:var(--white-color); background:var(--point-color);}
+.btnWrap .lineBtn{color:var(--point-color); border:1px solid var(--point-color);}
+.btnWrap .mbBtn{margin-bottom:15px;}
+.btnWrap .grayBtn{background:var(--gray-button);}
+
+.btnWrap2{display:flex; justify-content:flex-end; align-items:center; }
+.btnWrap2 .btn{margin-left:10px;}
+
+/*table*/
+.tableWrap{width:100%; border-top:2px solid var(--point-color); border-bottom:1px solid var(--border-color);}
+.tableWrap table{width:100%; table-layout:fixed;}
+.tableWrap table tr th{display:table-cell; vertical-align:middle; padding:0 15px; background: var(--bg-color); height: 45px; font-size: 1rem; color:var(--black-color); font-weight:600;}
+.tableWrap table tr td{display:table-cell; vertical-align:middle; padding:0 15px; font-size: 1rem; border-top: 1px solid var(--border-color); line-height: 1.3; height: 45px; text-align: center; cursor:pointer;}
+.tableWrap table tr td:first-child {text-align:left;}
+.tableWrap table tr:hover td{background:var(--hover-color);}
+
+.writeWrap table tr.inputText th{padding:0;}
+.writeWrap table tr.inputText td{padding:0;}
+.writeWrap table tr:first-child td{height:55px;}
+.writeWrap table tr td{text-align:left; cursor:auto;}
+.writeWrap table tr td.tit{background:var(--bg-color); color:var(--black-color); font-weight:600; border-right:1px solid var(--border-color); text-align:center;}
+.writeWrap input{width:100%; padding:0 15px; border:none;}
+.writeWrap textarea{width:100%; padding:15px; border:none; resize:none; min-height:320px; }
+.tableWrap.writeWrap table tr:hover td.tit{background:var(--bg-color); }
+.tableWrap.writeWrap table tr:hover td{background:inherit;}
+
+/*페이징 pagingWrap*/
+.pagingWrap{margin-top:40px;}
+.pagingWrap .pagination{display:flex; justify-content:center; align-items:center;}
+.pagingWrap .pagination li a.pageBtn{display:flex; align-items:center; padding:20px;}
+.pagingWrap .pagination li a.num{padding:10px;}
+.pagingWrap .pagination li a.on{color:var(--point-color);}
+
+
+
+
+
+

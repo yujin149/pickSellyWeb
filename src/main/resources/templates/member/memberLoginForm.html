@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/memberLayout}">
+
+<div layout:fragment="content">
+    <div class="memberWrap">
+        <div class="memberInner auto tac">
+            <h1 class="logoArea">
+                <a href="/"><img th:src="@{/images/logo.png}" alt="PICKSELLY"></a>
+            </h1>
+            <h3 class="title">로그인</h3>
+            <form action="/members/login" role="form" method="post">
+                <div class="infoList">
+                    <p class="title">아이디(이메일)</p>
+                    <input type="text" name="email" placeholder="아이디(이메일)를 입력해주세요.">
+                </div>
+                <div class="infoList">
+                    <p class="title">비밀번호</p>
+                    <input type="password" name="password" placeholder="비밀번호를 입력해주세요.">
+                    <p class="error" th:if="${loginErrorMsg}" th:text="${loginErrorMsg}"></p>
+                </div>
+                <div class="findInfoArea">
+                    <div class="saveId">
+                        <input type="checkbox" name="saveId" id="saveId">
+                        <span class="chkBox"></span>
+                        <label th:for="saveId">아이디 저장</label>
+                    </div>
+                    <ul class="findInfo">
+                        <li><a href="#">아이디 찾기</a></li>
+                        <li><a href="#">비밀번호 찾기</a></li>
+                    </ul>
+                </div>
+                <div class="btnWrap">
+                    <button type="submit" class="btn submitBtn mbBtn">로그인</button>
+                    <button type="button" class="btn lineBtn" onclick="location.href='/members/new'">회원가입</button>
+                </div>
+
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+            </form>
+
+            <ul class="snsLoginArea">
+                <li><a href="/oauth2/authorization/kakao">카카오 로그인</a></li>
+                <li><a href="/oauth2/authorization/naver">네이버 로그인</a></li>
+                <li><a href="/oauth2/authorization/google">구글 로그인</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</html>

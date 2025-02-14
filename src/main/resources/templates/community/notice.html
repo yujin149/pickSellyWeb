@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout1}">
+<body>
+<div layout:fragment="content">
+    <div class="auto noticeWrap contWrap">
+        <div class="titleWrap">
+            <h3 class="title">공지사항</h3>
+        </div>
+        <div class="searchWrap">
+            <div class="searchBox">
+                <form th:action="@{/conmmunity/notice}" class="searchBox">
+                    <input type="search" name="search" aria-label="search" placeholder="검색어를 입력해주세요.">
+                    <button type="submit" class="btn searchBtn">검색</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="tableWrap noticeWrap">
+            <table>
+                <colgroup>
+                    <col width="8%">
+                    <col width="*">
+                    <col width="12%">
+                    <col width="12%">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>No</th>
+                    <th>제목</th>
+                    <th>등록일</th>
+                    <th>조회수</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="notice : ${notices}">
+                    <td th:text="${notice.id}">No</td>
+                    <td th:text="${notice.title}">제목</td>
+                    <td th:text="${notice.createDate}">등록일</td>
+                    <td th:text="${notice.view}">조회수</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagingWrap">
+            <ul class="pagination">
+                <li><a href="#" class="pageBtn prevBtn"><img th:src="@{/images/arrowLeft.png}" alt="이전"></a></li>
+                <li><a href="#" class="num on">1</a></li>
+                <li><a href="#" class="pageBtn nextBtn"><img th:src="@{/images/arrowRight.png}" alt="다음"></a></li>
+            </ul>
+        </div>
+
+        <!-- 글쓰기 버튼 (관리자만 보이도록 설정) -->
+        <!--<button th:if="${#authorization.expression('hasRole(''ROLE_ADMIN'')')}">
+            글쓰기
+        </button>-->
+        <div class="btnWrap">
+            <button type="button" class="btn submitBtn" th:onclick="|location.href='@{/community/noticeWrite}';|">글쓰기</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

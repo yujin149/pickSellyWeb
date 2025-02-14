@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout1}">
+<body>
+<div layout:fragment="content">
+    <div class="auto noticeWrap contWrap">
+        <div class="titleWrap">
+            <h3 class="title">글쓰기</h3>
+        </div>
+
+
+        <div class="tableWrap writeWrap">
+            <table>
+                <colgroup>
+                    <col width="18%">
+                    <col width="32%">
+                    <col width="18%">
+                    <col width="32%">
+                </colgroup>
+                <tbody>
+                <tr class="inputText">
+                    <td colspan="4"><input type="text" name="boardTitle" placeholder="제목을 입력해주세요."></td>
+                </tr>
+                <tr>
+                    <td class="tit">작성자</td>
+                    <td>관리자</td>
+                    <td class="tit">등록일</td>
+                    <td>2024.12.23</td>
+                </tr>
+                <tr class="inputText">
+                    <td colspan="4"><textarea name="boardContents" placeholder="내용을 입력해주세요."></textarea></td>
+                </tr>
+                <tr>
+                    <td class="tit">비밀글</td>
+                    <td colspan="3"><input type="text" name="boardPass" placeholder="비밀글 작성 시 비밀번호를 입력해주세요."></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="btnWrap btnWrap2">
+            <button type="button" class="btn submitBtn" th:onclick="|location.href='@{/community/notice}';|">등록</button>
+            <button type="button" class="btn lineBtn" th:onclick="|location.href='@{/community/notice}';|">목록</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

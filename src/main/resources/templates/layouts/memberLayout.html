@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>PICKSELLY</title>
+<!--    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">-->
+    <link th:href="@{/css/reset.css}" rel ="stylesheet">
+    <link th:href="@{/css/common.css}" rel ="stylesheet">
+    <link th:href="@{/css/font.css}" rel ="stylesheet">
+    <link th:href="@{/css/layout.css}" rel ="stylesheet">
+    <link th:href="@{/css/main.css}" rel ="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link th:href="@{/css/datepicker.min.css}" rel="stylesheet"><!-- Air datepicker css -->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist.umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/js/datepicker.min.js}"></script> <!-- Air datepicker js -->
+    <script th:src="@{/js/datepicker.ko.js}"></script> <!-- 달력 한글 추가를 위해 커스텀 -->
+    <!--카카오 주소검색-->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script th:src="@{/js/kakaoAddress.js}"></script>
+
+
+    <th:block layout:fragment="script"></th:block>
+    <th:block layout:fragment="css"></th:block>
+</head>
+<body>
+
+<div layout:fragment="content" class = "content">
+
+</div>
+
+</body>
+</html>

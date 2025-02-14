@@ -1,0 +1,15 @@
+/*컨텐츠 영역*/
+.content{margin-top:208px;}
+
+.contWrap{padding:120px 0;}
+.contWrap .titleWrap .title{font-size:2.25rem; font-weight:700; color:var(--black-color);text-align:center; padding-bottom:40px;}
+.contWrap .searchWrap{background:var(--bg-color); padding:20px; border-radius:20px; }
+.contWrap .searchWrap .searchBox{width:100%;}
+.contWrap .searchWrap form{display:flex; justify-content:center; align-items:center; width:100%;}
+.contWrap .searchWrap form input{width:calc(46% - 110px); height:45px; padding: 0 15px; border-radius:10px; }
+.contWrap .searchWrap form button{width:100px; height:45px; border-radius:10px; margin-left:10px; background:var(--point-color); color:var(--white-color);}
+
+/*공지사항*/
+.noticeWrap{margin-top:40px;}
+.noticeWrap .btnWrap{display:flex; justify-content:flex-end; align-items:center; margin-top:40px;}
+.noticeWrap .btn {width:180px;}
