@@ -31,4 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+test/
+.mvn/
+mvnw
+mvnw.cmd
 pom.xml
+**/application.properties
+**/application-oauth.properties
